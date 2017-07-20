@@ -1,8 +1,8 @@
-tickrate_enabler 1.3 by ProdigySim
+## Tickrate Enabler 1.4 by ProdigySim
 
-======================
-Description
-======================
+https://www.l4dnation.com/confogl-and-other-configs/l4d12-tickrate-enabler-1-0/
+
+### Description
 
 Enables the "-tickrate" switch to be used from the command line to set the game's tickrate.
 
@@ -14,9 +14,7 @@ and removes the (30k) limits on rate control cvars:
 - sv_minrate
 - net_splitpacket_maxrate
 
-======================
-Instructions
-======================
+### Instructions
 
 1. Place tickrate_enabler.dll (Windows) or tickrate_enabler.so (Linux) in your server's addons folder.
 2. Place tickrate_enabler.vdf (L4D2) or tickrate_enabler_l4d1.vdf (L4D1) in your server's addons folder.
@@ -33,12 +31,13 @@ Instructions
 
 5. Done. Enjoy 100 tick L4D2 gameplay.
 
-======================
-Changelog / TODO
-======================
+### Changelog / TODO
 
+1.4: Contributed by $atanic $pirit
+	Fixed L4D2 CVomit::UpdateAbility Windows offsets.
+	
 1.3:
-    Fixed L4D1 CVomit::UpdateAbility linux offsets.
+	Fixed L4D1 CVomit::UpdateAbility linux offsets.
 
 1.2: thanks to vintik
 	Fixed maxrate patching on Windows (L4D1+2)
@@ -49,18 +48,17 @@ Changelog / TODO
 	Removes CVar Max on sv_max/minrate, net_splitpacket_maxrate
 	Some code reorganization
 1.0:
-    Patches boomer vomit to behave properly on modified high tickrates
-    Code cleaner perhaps
+	Patches boomer vomit to behave properly on modified high tickrates
+	Code cleaner perhaps
 0.1: 
-    -tickrate only pseudo-release
+	-tickrate only pseudo-release
 
 TODO:
 	Investigate other bugs
 	Remove 30K rate limit from HLTV clients.
 
-======================
-Credits / License
-======================
+### Credits / License
+
 tickrate_enabler is copyright Michael "ProdigySim" Busby 2012
 
 Parts of this project contain GPLv3 code adapted from SourceMod (Allied Modders L.L.C.) and Left4Downtown2 (Igor Smirnov et. al.).
