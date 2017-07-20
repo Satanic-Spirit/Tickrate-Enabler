@@ -33,29 +33,29 @@ and removes the (30k) limits on rate control cvars:
 
 ### Changelog / TODO
 
-1.4: Contributed by $atanic $pirit
-	Fixed L4D2 CVomit::UpdateAbility Windows offsets.
+1.4: Contributed by $atanic $pirit  
+	Fixed L4D2 CVomit::UpdateAbility Windows offsets.  
 	
 1.3:
-	Fixed L4D1 CVomit::UpdateAbility linux offsets.
+	Fixed L4D1 CVomit::UpdateAbility linux offsets.  
 
-1.2: thanks to vintik
-	Fixed maxrate patching on Windows (L4D1+2)
-	Added an extra maxrate patch on Linux that probably does nothing.
+1.2: thanks to vintik  
+	Fixed maxrate patching on Windows (L4D1+2)  
+	Added an extra maxrate patch on Linux that probably does nothing.  
 
 1.1:
-	Patches 2 hard coded max rate limits
-	Removes CVar Max on sv_max/minrate, net_splitpacket_maxrate
-	Some code reorganization
+	Patches 2 hard coded max rate limits   
+	Removes CVar Max on sv_max/minrate, net_splitpacket_maxrate  
+	Some code reorganization  
 1.0:
-	Patches boomer vomit to behave properly on modified high tickrates
-	Code cleaner perhaps
+	Patches boomer vomit to behave properly on modified high tickrates  
+	Code cleaner perhaps  
 0.1: 
-	-tickrate only pseudo-release
+	-tickrate only pseudo-release  
 
 TODO:
-	Investigate other bugs
-	Remove 30K rate limit from HLTV clients.
+	Investigate other bugs  
+	Remove 30K rate limit from HLTV clients.  
 
 ### Credits / License
 
