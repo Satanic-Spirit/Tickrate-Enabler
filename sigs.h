@@ -52,7 +52,7 @@
 const int g_FrameTimeReadOffsets[] =
 #if defined (_LINUX)
 #if defined (_L4D)
-	{0x1DD, 0x38D}; // L4D1 LINUX
+	{0x13D, 0x380}; // L4D1 LINUX
 #elif defined (_L4D2)
 	{0x12D, 0x5FD}; // L4D2 LINUX
 #endif
@@ -101,8 +101,8 @@ const int g_FrameTimeReadOffsets[] =
 #elif defined (_LINUX)
 	#define SIG_CNETCHAN_SETDATARATE "_ZN8CNetChan11SetDataRateEf"
 #if defined (_L4D)
-	// Change comparison jump at +0x20 to NOP2, removing upper bound check.
-	#define CNETCHAN_PATCH_OFFSET 0x20
+	// Change comparison jump at +0x1E to NOP2, removing upper bound check.
+	#define CNETCHAN_PATCH_OFFSET 0x1E
 	#define CNETCHAN_PATCH_CHECK_BYTE JA_8_OPCODE
 #elif defined (_L4D2)
 	#define CNETCHAN_PATCH_OFFSET 0x18
@@ -144,7 +144,7 @@ const int g_FrameTimeReadOffsets[] =
 	
 	Filling this with NOPs
 	*/
-	#define CGAMECLIENT_PATCH_OFFSET 0x4E
+	#define CGAMECLIENT_PATCH_OFFSET 0x4D
 	#define CGAMECLIENT_PATCH_CHECK_BYTE MOV_R32_IMM32_OPCODE
 #endif
 
@@ -168,7 +168,7 @@ const int g_FrameTimeReadOffsets[] =
 	*/
 	#define CLAMPCLIENTRATE_PATCH_CHECK_BYTE MOV_R32_IMM32_OPCODE
 #if defined (_L4D)
-	#define CLAMPCLIENTRATE_PATCH_OFFSET 0x42
+	#define CLAMPCLIENTRATE_PATCH_OFFSET 0x40
 #elif defined (_L4D2)
 	#define CLAMPCLIENTRATE_PATCH_OFFSET 0x38
 #endif

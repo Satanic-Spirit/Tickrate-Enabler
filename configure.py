@@ -16,8 +16,6 @@ builder.options.add_option('--enable-debug', action='store_const', const='1', de
                        help='Enable debugging symbols')
 builder.options.add_option('--enable-optimize', action='store_const', const='1', dest='opt',
                        help='Enable optimization')
-builder.options.add_option('--l4d2', action='store_const', const='1', dest='isl4d2',
-                       help='blah')
 builder.options.add_option('-s', '--sdks', default='all', dest='sdks',
                        help='Build against specified SDKs; valid args are "all", "present", or '
                             'comma-delimited list of engine names (default: %default)')
