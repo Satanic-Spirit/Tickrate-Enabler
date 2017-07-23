@@ -34,7 +34,8 @@ and removes the (30k) limits on rate control cvars:
 ### Changelog / TODO
 
 1.4: Contributed by $atanic $pirit  
-- Fixed L4D2 CVomit::UpdateAbility Windows offsets.  
+- Fixed L4D2 CVomit::UpdateAbility Windows offsets.
+- Fixed l4d Linux offsets.(Thanks to epzminion.) 
 	
 1.3:
 - Fixed L4D1 CVomit::UpdateAbility linux offsets.  
