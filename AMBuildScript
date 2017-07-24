@@ -143,8 +143,8 @@ class ExtensionConfig(object):
       '_stricmp=strcasecmp',
       '_snprintf=snprintf',
       '_vsnprintf=vsnprintf',
-      'HAVE_STDINT_H',
-      'GNUC',
+      #'HAVE_STDINT_H',
+      #'GNUC',
     ]
     cxx.cflags += [
       '-pipe',
@@ -246,9 +246,10 @@ class ExtensionConfig(object):
 
   def configure_linux(self, cxx):
     cxx.defines += ['_LINUX', 'POSIX']
-    cxx.linkflags += ['-Wl,--exclude-libs,ALL', '-lm']
+    cxx.linkflags += ['-lm']
     if cxx.vendor == 'gcc':
       cxx.linkflags += ['-static-libgcc']
+      cxx.linkflags += ['-static-libstdc++']
     elif cxx.vendor == 'clang':
       cxx.linkflags += ['-lgcc_eh']
 
@@ -339,7 +340,7 @@ class ExtensionConfig(object):
 
     if sdk.name in ['css', 'hl2dm', 'dods', 'sdk2013', 'bms', 'tf2', 'l4d', 'nucleardawn', 'l4d2', 'dota']:
       if builder.target_platform in ['linux', 'mac']:
-        compiler.defines += ['NO_HOOK_MALLOC', 'NO_MALLOC_OVERRIDE']
+		compiler.defines += ['NO_HOOK_MALLOC', 'NO_MALLOC_OVERRIDE']
 
     if sdk.name == 'csgo' and builder.target_platform == 'linux':
       compiler.linkflags += ['-lstdc++']
