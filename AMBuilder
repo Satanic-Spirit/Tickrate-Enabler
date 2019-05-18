@@ -12,6 +12,12 @@ sourceFiles = [
   'boomervomitpatch.cpp',
   
   os.path.join(Extension.sm_root, 'public', 'asm', 'asm.c'),
+  os.path.join(Extension.sm_root, 'public', 'libudis86', 'decode.c'),
+  os.path.join(Extension.sm_root, 'public', 'libudis86', 'itab.c'),
+  os.path.join(Extension.sm_root, 'public', 'libudis86', 'syn-att.c'),
+  os.path.join(Extension.sm_root, 'public', 'libudis86', 'syn-intel.c'),
+  os.path.join(Extension.sm_root, 'public', 'libudis86', 'syn.c'),
+  os.path.join(Extension.sm_root, 'public', 'libudis86', 'udis86.c'),
   os.path.join(Extension.mms_root, 'core', 'sourcehook', 'sourcehook.cpp'),
   os.path.join(Extension.mms_root, 'core', 'sourcehook', 'sourcehook_impl_chookidman.cpp'),
   os.path.join(Extension.mms_root, 'core', 'sourcehook', 'sourcehook_impl_cproto.cpp'),
@@ -51,4 +57,5 @@ for sdk_name in Extension.sdks:
 #  if builder.target_platform == 'linux' or sdk_name in detour_games:
 #    binary.sources += [os.path.join(Extension.sm_root, 'public', 'CDetour', 'detours.cpp')]
 
+binary.compiler.defines += ['HAVE_STRING_H'];
 Extension.extensions = builder.Add(project)
