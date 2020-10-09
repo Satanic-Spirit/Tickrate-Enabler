@@ -165,7 +165,7 @@ class ExtensionConfig(object):
       '-fno-threadsafe-statics',
       '-Wno-non-virtual-dtor',
       '-Wno-overloaded-virtual',
-	  '-Wno-maybe-uninitialized',
+	  '-Wno-uninitialized',
 	  '-Wno-return-type',
       '-fvisibility-inlines-hidden',
 	  '-fexceptions',
